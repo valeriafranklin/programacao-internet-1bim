@@ -1,0 +1,158 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jogo da Velha </title>
+    <style>
+        
+        *{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+        }
+        
+        body{background-color: #470505;}
+        
+        h1{
+            text-align: center;
+            color: white;
+            padding-top: 50px;
+            font-size: 50px;
+        }
+        
+        div
+        {
+            width: 30%;
+            height: 100%;
+            margin: auto;
+        }
+        
+        .divInput
+        {
+            height: 30%;
+            width: 70%;
+            float: none;
+        }
+        
+        input{
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgb(184, 149, 109);
+            font-size: 60px;
+            margin: 5px;
+            text-align: center;
+        }
+        
+        p{
+            color: white;
+            text-align: center;
+            font-size: 15px;
+        }
+  </style>
+
+ <script>
+
+   function compara()
+   {
+
+      setTimeout( ()=> 
+      {
+
+            var celula1 = document.getElementById("celula1").value;
+            var celula2 = document.getElementById("celula2").value;   
+            var celula3 = document.getElementById("celula3").value;
+            var celula4 = document.getElementById("celula4").value;
+            var celula5 = document.getElementById("celula5").value;
+            var celula6 = document.getElementById("celula6").value;
+            var celula7 = document.getElementById("celula7").value;
+            var celula8 = document.getElementById("celula8").value;
+            var celula9 = document.getElementById("celula9").value;
+
+                if(celula1 !="" && celula1 == celula2 && celula2 == celula3)
+                {
+                    window.alert(celula3 + " venceu!");
+                    location.reload();
+                }
+
+                else if(celula4 !="" && celula4 == celula5 && celula5 == celula6)
+                {
+                    window.alert(celula6 + " venceu!");
+                    location.reload();
+                }
+            
+                else if(celula7 !="" && celula7 == celula8 && celula8 == celula9)
+                {
+                    window.alert(celula9 + " venceu!");
+                    location.reload();
+                }
+
+                else if(celula1 !="" && celula1 == celula4 && celula4 == celula7)
+                {
+                    window.alert(celula7 + " venceu!");
+                    location.reload();
+                }
+
+                else if(celula2 !="" && celula2 == celula5 && celula5 == celula8)
+                {
+                    window.alert(celula8 + " venceu!");
+                    location.reload();
+                }
+               
+                else if(celula3 !="" && celula3 == celula6 && celula6 == celula9)
+                {
+                    window.alert(celula9 + " venceu!");
+                    location.reload();
+                }
+
+                else if(celula1 !="" && celula1 == celula5 && celula5 == celula9)
+                {
+                    window.alert(celula9 + " venceu!");
+                    location.reload();
+                }
+
+                else if(celula3 !="" && celula3 == celula5 && celula5 == celula7)
+                {
+                    window.alert(celula7 + "venceu! ");
+                    location.reload();
+                }
+
+                else if ( celula1!="" &&
+                         celula2 !="" &&
+                         celula3 !="" &&
+                         celula4 !="" &&
+                         celula5 !="" &&
+                         celula6 !="" &&
+                         celula7 !="" &&
+                         celula8 !="" &&
+                         celula9 !="" )
+                         {
+                            window.alert("Empate! Velha!");
+                            location.reload();
+                        }
+            }, 50);
+    }
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1> Jogo da Velha </h1>
+        <p>Jogador 01ㅤ‣ㅤXㅤㅤㅤJogador 02ㅤ‣ㅤO</p>
+
+        <div class="divInput">
+            <input type="text" id="celula1" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula2" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula3" maxlength="1" onkeypress="window.compara()"><br><br>
+
+            <input type="text" id="celula4" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula5" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula6" maxlength="1" onkeypress="window.compara()"><br><br>
+
+            <input type="text" id="celula7" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula8" maxlength="1" onkeypress="window.compara()">
+            <input type="text" id="celula9" maxlength="1" onkeypress="window.compara()"><br><br>
+        </div>
+</div>
+</body>
+</html>
